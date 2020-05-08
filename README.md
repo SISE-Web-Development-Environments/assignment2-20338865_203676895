@@ -11,14 +11,14 @@ To success this almost impossible mission the legandary delevopers added 2 funci
 	If you succeess eating the hour glass - you will get extra 10 seconds for the mission.
 
 Additional rules:
-1. you can configure on your own the keys to control the pacman.
+1. you can configure on your own keys to control the pacman.
 2. You can choose the total food amonnt that will apear on the board.
 2. you can choose the colors of all the the three types of food.
 3. You can choose how many monsters will appear on the game from 1 to 4.
 4. You can choose how much time you will have to complete your mission.
 5. A shiny diamond will run on the bouard - try cathing it! it will give 50 points bonus!
 
-Enought talking.. go and start your mission by clicking here:
+Enought talking.. go and start your mission by clicking here: https://sise-web-development-environments.github.io/assignment2-20338865_203676895/
 
 
 Valar Morghulis,
