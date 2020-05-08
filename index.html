@@ -17,10 +17,10 @@
 		<!-- MENU -->
 		<div class="topnav">
 			<div class="topnav-left">
-				<a id="menu_welcome" onclick="menu('welcome')" href="#welcome">Welcome</a>
-				<a id="menu_login" onclick="menu('login')" href="#login">Log In</a>
-				<a id="menu_register" onclick="menu('register')" href="#register">Register</a>
-				<a id="menu_about" onclick="menu('about')" href="#about">About</a>
+				<a id="menu_welcome" onclick="menu('welcome')">Welcome</a>
+				<a id="menu_login" onclick="menu('login')">Log In</a>
+				<a id="menu_register" onclick="menu('register')">Register</a>
+				<a id="menu_about" onclick="menu('about')">About</a>
 			</div>
 			<img id="logo_menu" src="./resource/images/logo.png"/>
 		</div>
@@ -36,7 +36,7 @@
 		<div id="register" class="box">
 			<img src="./resource/images/pacman-avatar.png" class="avatar"/>
 			<h1>Register Here</h1>
-			<form class="cmxform" method="post" id="form_registration_id">
+			<form class="cmxform" id="form_registration_id">
 				<label autofocus for="registration_username_id">Username</label>
 				<input type="text" name="registration_username_name" id="registration_username_id" placeholder="JohnSmith"/>
 				<br>
@@ -59,7 +59,7 @@
 		<div id="login" class="box">
 			<img src="./resource/images/pacman-avatar.png" class="avatar"/>
 			<h1>Login Here</h1>
-			<form class="cmxform" method="post" id="form_login_id">
+			<form class="cmxform" id="form_login_id">
 				<label autofocus for="login_username_id">Username</label>
 				<input type="text" name="login_username_name" id="login_username_id" placeholder="Enter Username"/>
 				<label for="login_password_id">Password</label>

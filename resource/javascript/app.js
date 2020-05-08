@@ -61,7 +61,6 @@ $(document).ready(function () {
 			},
 			registration_name_name: {
 				required: true,
-				nowhitespace: false,
 				lettersonly: true
 			},
 			registration_email_name: {
@@ -83,7 +82,6 @@ $(document).ready(function () {
 			},
 			registration_name_name: {
 				required: "Please enter a name.",
-				nowhitespace: "Full name must contain whitespace.",
 				lettersonly: "Full name can be only letters."
 			},
 			registration_email_name: {
@@ -99,7 +97,7 @@ $(document).ready(function () {
 			register();
 
 			//reset form details
-			let form = $("#form_registration_ide");
+			let form = $("#form_registration_id");
 			form[0].reset();
 		},
 	});
@@ -339,10 +337,11 @@ function randomConfigurations()
 	document.getElementById('configuration_set_down_id').value = "ArrowDown";
 	document.getElementById('configuration_set_left_id').value = "ArrowLeft";
 	document.getElementById('configuration_set_right_id').value = "ArrowRight";
-	chosen_key_up = 38;
-	chosen_key_down = 40;
-	chosen_key_left = 37;
-	chosen_key_right = 39;
+
+	chosen_key_up = "ArrowUp";
+	chosen_key_down = "ArrowDown";
+	chosen_key_left = "ArrowLeft";
+	chosen_key_right = "ArrowRight";
 
 	//random food amount
 	chosen_food_amount = Math.floor(Math.random() * (41) + 50);;
@@ -483,6 +482,7 @@ var arrow_keys_handler = function(e) {
 	}
 };
 window.addEventListener("keydown", arrow_keys_handler, false);
+
 
 function Start() {
 
@@ -906,6 +906,12 @@ function InitialSpecial() {
 function startMainMusic() {
 	document.getElementById("main_sound").play();
 	document.getElementById("main_sound").volume = 0.1;
+}
+
+function stopMainMusic()
+{
+	document.getElementById("main_sound").pause();
+	document.getElementById("main_sound").currentTime = 0;
 }
 
 function SetSpecialHeart() {
@@ -1525,6 +1531,9 @@ function resetGame() {
 	score = 0;
 
 	reset_chosen_configurations();
+	stopMainMusic();
+	// startMainMusic();
+
 }
 
 function reset_chosen_configurations() {
@@ -1560,5 +1569,6 @@ function newGame() {
 	lblScore.value = 0;
 	lblTime.value = 0;
 	score = 0;
+	stopMainMusic();
 	Start();
 }
